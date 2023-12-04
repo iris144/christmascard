@@ -1,0 +1,106 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Cookie&display=swap" rel="stylesheet">
+    <style>
+        body {
+          width: 100%;
+          height: 100vh;
+          perspective: 1200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-family: 'Archivo Narrow', sans-serif;
+          background-image: url('achtergrond.jpg');
+            background-size: cover;
+        }
+
+        .card {
+          transform-style: preserve-3d;
+          position: relative;
+          height: 500px;
+          cursor: pointer;
+        }
+
+        .front, .back, .page {
+          transform-style: preserve-3d;
+          transform-origin: left center;
+          transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+          position: absolute;
+          width: 320px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #F7F7F7;
+          padding: 40px;
+        }
+
+        .front {
+            background: url('runekerst.jpg')
+            no-repeat center darkred;
+            background-size: cover;
+        }
+
+        .page {
+            background: url('anderebinnenkant.jpg')
+            no-repeat center darkred;
+            background-size: cover;
+        }
+
+        .card:hover .front {
+          transform: rotateY(-160deg);
+          box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+        }
+
+        .card:hover .page {
+          transform: rotateY(-159deg);
+          box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+        }
+
+        .card:hover .back {
+          transform: rotateY(-20deg);
+          box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+        }
+
+        h1 {
+            font-family: 'Cookie', serif;
+            font-size: 40px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .message {
+            margin-top: 30px;
+            color: #900909;
+           }
+
+        h5 {
+            font-family: 'Cookie', serif;
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="card">
+    <div class="back">
+        <div class="message">
+            <h5>Hi!</h5>
+            <p>Wishing you a cozy holiday season and a fantastic
+                New Year filled with good vibes and great times ahead!
+                Enjoy the moments, relax, and here's to a wonderful year ahead!</p>
+            <h5>Kind regards, Iris</h5>
+        </div>
+    </div>
+    <div class="page">
+    </div>
+    <div class="front">
+        <h1>Fijne feestdagen!</h1>
+    </div>
+</div>
+</body>
+</html>
